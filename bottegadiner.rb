@@ -27,4 +27,17 @@ if answer == 'yes'
 elsif answer =='no'
   puts "What would you like instead?"
 end
+
+
+  @entree = ["chicken", "steak", "fish"]
+  @side_1 = ["steamed vegetables", "baked potato", "french fries"]
+  @side_2 = ["steamed vegetables", "baked potato", "french fries"]
+   
+  p random_entree = @entree.sample
+  
+  p random_side_1 = @side_1.shuffle.first
+  
+  puts random_side_2 = @side_2.sample
+  
+
   
