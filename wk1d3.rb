@@ -22,6 +22,7 @@ arr_3 = ['3', '4', '0']
 array_converter = [(arr_1), (arr_2), (arr_3)]
 puts array_converter
 
+# last is jordans solution
 def array_converter *arrays
   arrays.flatten.map(&:to_i)
 end
