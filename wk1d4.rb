@@ -5,7 +5,7 @@ def palindrome? word
 end
 
 puts "what is the word?"
-word = gets.chomp
+word = gets.chomp!
 p word
 
 if word.downcase == word.downcase.reverse
