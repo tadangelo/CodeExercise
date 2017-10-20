@@ -15,10 +15,12 @@ string_array = [
 def string_parser string_array
   final_array = []
   string_array.each do |str|
-    final_array << str.scan(/\d+/.last.to_i)
+    final_array << str.scan(/\d+/).last.to_i
   end
   final_array
 end
+
+p string_parser(string_array)
 
 
 #describe "String Parser" do
