@@ -21,17 +21,16 @@ p str.word_list
 
 
 
+# describe 'Word Reporter' do
+  # before do
+    # @str = "- the quick brown fox / jumped over the lazy fox."
+  # end
 
-#escribe 'Word Reporter' do
-  #before do
-#    #@str = "- the quick brown fox / jumped over the lazy fox."
-  #end
+  # it 'Counts words accurately' do
+    # expect(@str.total_words).to eq(9)
+  # end
 
-  #it 'Counts words accurately' do
-    #expect(@str.total_words).to eq(9)
-  #end
-
-  #it 'Returns a hash that totals up word usage' #do
+  # it 'Returns a hash that totals up word usage' # do
     #expect(@str.word_list).to eq({"the"=>2,
                                   #"quick"=>1,
                                   #"brown"=>1,
