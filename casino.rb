@@ -44,7 +44,7 @@ class CASINO
         puts "you flipped heads you win"
         @balance = @balance + @answer
         puts "your new balance is #{@balance}"
-
+        
         if @balance <= 0
           puts "You lost all your money!"
           casinoloop = false
