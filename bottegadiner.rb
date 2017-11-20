@@ -34,12 +34,13 @@ puts meal
   p random_side_1 = @side_1.shuffle.first
   puts random_side_2 = @side_2.sample
 
+
 puts "Would you like the Chef's Special?"
 answer = gets.chomp!
 if answer.downcase == 'yes'
   puts "Great Choice! That will be $#{(13.50 * 1.825).round(2)}, I'll be back with your order soon."
 elsif answer.downcase =='no'
-  puts "What would you like instead?"
+  puts "What entree would you like instead?"
 end
 
 @response = ["Anything else?", "Is that all?", "Don't forget your sides."]
@@ -59,5 +60,6 @@ end
 
 puts @total
 
-# need to end if answer to chef special is yes and need to continue if answer to chef special is no
+
 # need to calculate prices based on menu prices and user choices
+#needs to end with we dont make that here 
