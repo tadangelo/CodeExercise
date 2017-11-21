@@ -61,14 +61,12 @@ elsif answer.downcase =='no'
 
   if answer2.downcase == "breakfast"
     @price = (5.50 * 1.0825).round(2)
-  end
-
-  if answer2.downcase == "lunch"
+  elsif answer2.downcase == "lunch"
     @price = (8.00 * 1.0825).round(2)
-  end
-
-  if answer2.downcase == "dinner"
+  elsif answer2.downcase == "dinner"
     @price = (12.50 * 1.0825).round(2)
+  else
+    @price = (10.50 * 1.0825).round(2)
   end
 
 
