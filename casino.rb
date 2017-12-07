@@ -20,7 +20,7 @@ class CASINO
 
   while casinoloop
     puts "what game would you like to play?"
-    puts "you have a balance of #{@balance} tokens" 
+    puts "you have a balance of #{@balance} dollars in chips" 
     puts "we have flip, roulette, and slots"
     answer = gets.chomp!
 
@@ -28,7 +28,7 @@ class CASINO
       puts "you have selected flip"
 #possible refactor
       puts "Welcome to Flip-A-Coin!"
-      puts "You have #{@balance} tokens"
+      puts "You have #{@balance} dollars"
       puts "How much would you like to bet?"
       @answer = gets.chomp.to_i
   
@@ -37,15 +37,15 @@ class CASINO
       if randomNum == 1
         puts "you flipped tails you lose"
         @balance = @balance - @answer
-        puts "your new balance is #{@balance} tokens"
+        puts "your new balance is #{@balance} dollars"
       else
         puts "you flipped heads you win"
         @balance = @balance + @answer
-        puts "your new balance is #{@balance} tokens"
+        puts "your new balance is #{@balance} dollars"
       end
         
       if @balance <= 0
-        puts "You lost all your money!"
+        puts "You lost all your chips!"
         casinoloop = false
       end
 
@@ -55,29 +55,29 @@ class CASINO
       val = rand(10)
 
       if val == 7
-        puts "you won cherries you won 3 tokens"
+        puts "you won cherries you won 3 dollars"
         @balance = @balance + 3
-        puts "you have a balance of #{@balance} tokens" 
+        puts "you have a balance of #{@balance} dollars" 
       elsif val == 8
-        puts "you won triple 7's you won 4 tokens"
+        puts "you won triple 7's you won 4 dollars"
         @balance = @balance + 4
-        puts "you have a balance of #{@balance} tokens"
+        puts "you have a balance of #{@balance} dollars"
       elsif val == 9
-        puts "you won plums you won 5 tokens"
+        puts "you won plums you won 5 dollars"
         @balance = @balance + 5
-        puts "you have a balance of #{@balance} tokens"
+        puts "you have a balance of #{@balance} dollars"
       elsif val == 0
-        puts "You hit the JACKPOT! you won 8 tokens"
+        puts "You hit the JACKPOT! you won 8 dollars"
         @balance = @balance + 8
-        puts "you have a balance of #{@balance} tokens"
+        puts "you have a balance of #{@balance} dollars"
       else
-        puts "you lost your coin sorry"
+        puts "you lost your chip sorry"
 
         @balance = @balance - 1
-        puts "you have a balance of #{@balance} tokens"
+        puts "you have a balance of #{@balance} dollars"
 
         if @balance <= 0
-          puts "You lost all your money!"
+          puts "You lost all your chips!"
           casinoloop = false
         end
       end
@@ -93,15 +93,15 @@ class CASINO
         puts "The wheel landed on #{rand_num}"
 
       if @rand_num == answer_roulette
-        puts "You won #{answer_roulette} tokens"
+        puts "You won #{answer_roulette} dollars"
         @balance = @balance + answer_roulette
-        puts "your new balance is #{@balance} tokens"
+        puts "your new balance is #{@balance} dollars"
       else
-        puts "You lost #{answer_roulette} tokens"
+        puts "You lost #{answer_roulette} dollars"
         @balance = @balance - answer_roulette
-        puts "your new balance is #{@balance} tokens"
+        puts "your new balance is #{@balance} dollars"
         if @balance <= 0
-          puts "You lost all your tokens!"
+          puts "You lost all your chips!"
           casinoloop = false
         end
       end
