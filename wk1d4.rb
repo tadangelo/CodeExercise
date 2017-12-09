@@ -14,7 +14,12 @@ else
   FALSE
 end
 
+def palindrome? word
+    word = word.gsub(/[^a-zA-Z\d]/, "")
+    word.casecmp?(word.reverse)
+end
 
+p palindrome? "tacocat"
 
 
 
